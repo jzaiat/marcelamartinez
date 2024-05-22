@@ -6,7 +6,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 df = pd.read_csv('Patient_CNVs.csv', sep='\t')
 
 app = Dash(__name__)
-
+server = app.server
 
 app.layout = html.Div([(html.H1("DataTable with Hypopituitarism Patient CNVs", style={'textAlign': 'center', 'color': 'blue', 'fontSize': 30})),
     dash_table.DataTable(id='datatable-interactivity',
